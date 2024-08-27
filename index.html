@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body style="background-color: #222;">
+    <div id="parent" class="flex justify-center h-screen items-center">
+        <div id="cards" style="background: linear-gradient(135deg, #00feba, #5b548a);" class="w-96 h-auto m-30 rounded-lg">
+            <div class="flex justify-center items-center gap-5 mt-3">
+                <input id = "name" type="text" placeholder="Enter the city name" class="h-10 rounded-lg w-52 p-4">
+                <button id ="search" class="bg-slate-200 p-3 rounded-full"><img src="images/search.png " class="h-6"></button>
+            </div>
+            <div id="error" class="text-center mt-2" style="display: none;">
+                <p class="text-xl">Invalid City Name</p>
+            </div>
+            <div id="weather" class="text-center mb-9" style="display: none;">
+                <img id = "icon" src="images/rain.png" class="block m-auto">
+                <h1 id = "temp" class="font-extrabold text-6xl text-stone-100">22°C</h1>
+                <h1 id = "city" class="font-extrabold text-5xl text-stone-100">New York</h1>
+                
+                <div class="flex justify-around mt-4">
+                    <div class="flex justify-around mt-10 gap-3">
+                        <img src="images/humidity.png" class="h-8">
+                        <div class="leading-none">
+                            <p id = "humidity" class="text-stone-100 font-mono w-1">50%</p>
+                            <p class="text-stone-100 font-mono">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-around mt-10 gap-3">
+                        <img src="images/wind.png" class="h-10">
+                        <div class="leading-none mt-1">
+                            <p id = "wind" class="text-stone-100 font-mono w-1">15kmph</p>
+                            <p class="text-stone-100 font-mono">Wind</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
